@@ -12,4 +12,6 @@ The objective of having this blog site is to promote free/libre and open source 
 
 If you like my blog posts, you can follow my GitHub Page via RSS feed. If you like to have conversation with me privately, you can contact my email: littleclover909@gmail.com.
 
-[cc_by-codes]: https://creativecommons.org/licenses/by/4.0/legalcode
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+[cc_by-codes]: https://creativecommons.org/licenses/by/4.0/
