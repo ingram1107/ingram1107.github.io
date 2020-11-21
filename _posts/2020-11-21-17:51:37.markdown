@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "First Blog!"
+date:   2020-11-21 17:51:37 +0800
+categories: general
+---
+Hi, strangers! If you can read this post, that means I have already succeeded to have a static website using Jekyll as the site generator that I dreams. All of the upcoming articles will be licensed under [Creative Commons Attribution 4.0 International Public License][cc_by-codes] which means that you, as the reader, are free to share and adapt my articles to everywhere else as you wish in the condition that you acknowledge me in any of your distributed works.
+
+Let me introduce myself shortly: I am a student. In fact, I am in my third trimester to work on my Information Technology (IT) degree in my local university. Reading books and programming are the hobbies that I enjoys during my spare time. Frequently, I maintain my Linux machine to adjust my workflow to improve my productivity and proficiency in Linux.
+
+The objective of having this blog site is to promote free/libre and open source software (FLOSS) that I enjoy using which including and not limited to Linux, GNU utils and various GUI and TUI software. I will discuss about the politics, mainly about software, Malaysia and world, and share my view on them. As a ordinary folk, I am not interested in political correctness that liberals praise. Therefore, I will write my blog posts in my own phrases.
+
+If you like my blog posts, you can follow my GitHub Page via RSS feed. If you like to have conversation with me privately, you can contact my email: littleclover909@gmail.com.
+
+[cc_by-codes]: https://creativecommons.org/licenses/by/4.0/legalcode
