@@ -9,4 +9,4 @@ With these reason, all of the articles in the blog site are licensed under [Crea
 
 If you have questions about him and this blog site, feel free to contact via email: littleclover909@gmail.com.
 
-[cc-by-code]: https://creativecommons.org/licenses/by/4.0/legalcode
+[cc-by-code]: https://creativecommons.org/licenses/by/4.0/
