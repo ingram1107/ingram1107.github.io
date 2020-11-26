@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Google's Determination to Block WebKit Browsers"
+date:   2020-11-26 15:58:30 +0800
+categories: open-source
+---
+Google announced that [it will blocks Google Account sign-ins from all embedded frameworks][google-blog] included WebKit-based browsers after 4 January 2021 to prevent "man-in-the-middle" (MITM) attacks. [This alarmed WebKit developers][webkit-ml] to develop counter measures to retain its own existence against the new restriction by Google. Although it might not bother Chrome, Chromium, Firefox and Safari users, it is a serious threat to the open source community which in the worst case, might even wipes an open source project from being exists.
+
+This security measure taken by Google is not only insufficient but also anti-competitive to the browser marketplace. Instead of blocking all embedded frameworks, Google should develops a security layer with a harden protocol on top of their API. However, it seems like Google does not have manpower or time to do that, as expected for a proprietary API. Not to mention that this will further solidify its domination in browser marketplace during the ongoing pandemic.
+
+Fortunately, WebKit developers are [able to found the solution][webkit-solve] by sending the header `Google-Accounts-Check-OAuth-Login:true`. There are still some uncertainties about this hack since it is not truly tested on a real water. We will only know if it will works or not when the time comes.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+[google-blog]: https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html
+[webkit-ml]: https://lists.webkit.org/pipermail/webkit-dev/2020-November/031604.html
+[webkit-solve]: https://lists.webkit.org/pipermail/webkit-dev/2020-November/031606.html
