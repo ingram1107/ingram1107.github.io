@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Malaysia Bar Should Move From Zoom To Open Source Alternatives"
+data:   2020-12-04 11:45:31 +0800
+categories: open-source
+---
+Malaysia's lawyers are called to Malaysia Bar through online proceedings via Zoom to discuss jurisdiction matters. It is glad to see that Malaysia Bar are able to find a solution rather than postpone their meeting indefinitely due to current CMCO restriction.
+
+That said, they are using a proprietary solution for their proceedings which subjected themselves to the rules of a single private corporation. The major drawback of using such software is that there is no way to know that this software is doing exactly what it is claim to do. Furthermore, due to its private nature, the discussion in Malaysia Bar are solely subjected to the rules of the corporation, not the laws of Malaysia.
+
+Zoom is a really bad choice from Malaysia Bar since it imposed controversial measures to control the "well behaviours" of their users and constantly bolstering about how secure they are. The memory of Zoom banned [Palestinian activist and shut down the corresponding academic meetings about this matters][zoom-ban-palestinian] is still fresh. I can not trust such company that outright infringed the free speech of certain individual or groups to be able to respect the integrity of Malaysia laws and values. Such practice is a contradictory to their claim that Zoom support the end-to-end (e2e) encryption.
+
+A real end-to-end encryption will only allow the clients that have the same secret key to be able to view the messages or data sent to them. Company that provides the services does not and should not have the key to encrypt the client's message. The encryption will only happen at the end of the services, which is the clients. The responsibility of the company is to deliver the data from and among the clients. The client that has the same secret key can encrypts them whereas the client that does not will not be able to view them and the data sent will vanished from the local storage and memory. Obviously, Zoom does not have the end-to-end encryption technology as they claimed.
+
+I would like to propose some open source solutions as better alternatives to Zoom, which are Jitsi and Element.io. Jitsi offers not only the ability to stream online video conferencing but also their end-to-end encryption algorithm to further secure the meeting with little performance cost. Element.io provides similar services but using different encryption algorithm, Signal Protocol, one of the best end-to-end encryption protocol. By adapting one of these software as the means for online proceedings, Malaysia Bar will not have to worry about the online censorship imposed by private corporation and the possible security vulnerabilities.
+
+[zoom-ban-palestinian]: https://www.npr.org/2020/11/23/937336309/welcome-to-the-party-zoom-video-apps-rules-lead-to-accusations-of-censorship
