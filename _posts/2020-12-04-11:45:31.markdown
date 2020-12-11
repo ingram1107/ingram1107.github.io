@@ -14,4 +14,9 @@ A real end-to-end encryption will only allow the clients that have the same secr
 
 I would like to propose some open source solutions as better alternatives to Zoom, which are Jitsi and Element.io. Jitsi offers not only the ability to stream online video conferencing but also their end-to-end encryption algorithm to further secure the meeting with little performance cost. Element.io provides similar services but using different encryption algorithm, Signal Protocol, one of the best end-to-end encryption protocol. By adapting one of these software as the means for online proceedings, Malaysia Bar will not have to worry about the online censorship imposed by private corporation and the possible security vulnerabilities.
 
+<<<<<<< HEAD
+=======
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+>>>>>>> 69bba6e (blog on 2020-12-04 11:45:31 about Malaysia Bar Zoom adaptation for)
 [zoom-ban-palestinian]: https://www.npr.org/2020/11/23/937336309/welcome-to-the-party-zoom-video-apps-rules-lead-to-accusations-of-censorship
