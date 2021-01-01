@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "Plan for 2021"
+date:   2021-01-01 23:21:40 +0800
+categories: general
+---
+Happy New Year to my reader if there is any! I am planing to complete several tasks to improve my skills as a programmer, system administrator and socialist. Though not necessarily planned for 2021, I wish that my rough craft for 2021 will inspire you to have a motivation to moving forward.
+
+Out of curiosity, I am going to test Redox OS even though it is not in my university syllables. It is always a great idea to test a software especially an operating system to study their approach, strength and weakness in the purpose of enhanced the knowledge on software programming or some sophisticated concepts. That is the way that I learn Linux and eventually adopt it as my daily driver. Additionally, I would like to study algorithms before my professor eventually teach it on my second year to further improve my programming skills. Oh yeah, I have completed by AWK Cloud Practitioner training, taking the test will my priority.
+
+I might going to learn Japanese to be able to understand some of the Vtuber peculiarly Hololive talents' stream. Some may ask that there are some good translation channels that exist in YouTube but I never like the idea to watch a stream with caption turn on. It always kills the fun especially during live. Furthermore, I would like to continuing my study on Esperanto to speak it fluently. If you found any good source in Esperanto, preferably podcasts, you can email to the my [email address](email-addr).
+
+Developing my own GTK theme and Lua plugin for Neovim would be fun, so I am planing to do it so in 2021. I am quite frustrated that my desktop GTK theme is not fitting into my theme on terminal and polybar. Therefore, develop a GTK theme seems more viable to me as my discontent grows. For Neovim, I need to wait for its official 5.0 version release to be able to write my own Lua plugin since I use Neovim pretty heavily for various tasks.
+
+Well, as a socialist, I will continuing my reading on Capital (Volume I, or II if I am smart) and eventually start reading Lenin's. It is going to guide my thinking and action for the advancement of the socialisms. Hope that I can get the membership from PKM.
+
+There might be possible for me to translate YouTube World War Two series into Chinese and Malay but there is a concerns that I may run out of time for that. Nevertheless, I am going to try it.
+
+That is it I guess. Hope that you have some idea to do for your next day or even future!
+
+Plan
+- study Capital and Lenin's works
+- join PKM
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+[email-addr]: littleclover909@gmail.com
