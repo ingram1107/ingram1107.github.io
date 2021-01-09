@@ -1,10 +1,10 @@
 ---
-layout:   post
-title:    "The Aftermath of The Failed Coup"
-date:     2021-01-10 01:36:15 +0800
+layout: post
+title:  "The Aftermath of The Failed Coup"
+date:   2021-01-10 01:36:15 +0800
 categories: politics
 ---
-The attempt to take over the government on 6 January 2021 had failed but it delivered a great shock to the world on how inadequate the security system that US have around its most important building. Those police officers are said incompetent at best, treason at worst. There are clear evidences that the polices were working together with the rioters. \[[1][video1]\]\[[2][video2]\]
+The attempt to take over the government on 6 January 2021 had failed but it delivered a great shock to the world on how inadequate the security system that US have around its most important building. Those police officers are said incompetent at best, treason at worst. There are clear evidences that the polices were working together with the rioters. [1][video1][2][video2]
 
 Frankly, I am not surprise that the police are in favour of those fascists during BLM (Black Lives Matter) and Antifa (Anti-fascisms) protests. When those peaceful protesters being arrested for no wrongdoing, violent groups such as Proud Boy get away from stabbing easily under the eyes of the polices. The thing that caught me off guard is that there were no one standing out against the idea to cooperate with the rioters which shows how corrupted the US police system is. A serious consequence should fall to those polices for their own inadequate and inability to withhold their biases.
 
@@ -16,6 +16,6 @@ Wish you well, comrades, and tomorrow, L'Internationale will be the human race.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
 
-[video1]: https://nitter.net/christina_bobb/status/1347596278583197698
-[video2]: https://nitter.net/joshuapotash/status/1346931235176783873
-[based-twitter]: https://twitter.com/realdonaldtrump
+[video1]: https://nitter.net/christina_bobb/status/1347596278583197698/
+[video2]: https://nitter.net/joshuapotash/status/1346931235176783873/
+[based-twitter]: https://twitter.com/realdonaldtrump/
