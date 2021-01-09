@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "The Aftermath of The Failed Coup"
-data:     2021-01-10 01:36:15 +0800
+date:     2021-01-10 01:36:15 +0800
 categories: politics
 ---
 The attempt to take over the government on 6 January 2021 had failed but it delivered a great shock to the world on how inadequate the security system that US have around its most important building. Those police officers are said incompetent at best, treason at worst. There are clear evidences that the polices were working together with the rioters. \[[1][video1]\]\[[2][video2]\]
