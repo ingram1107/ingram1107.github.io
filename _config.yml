@@ -22,7 +22,7 @@ title: Ingram Blog
 email: littleclover909@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     A blog/rant site for this poor man to express his support on FLOSS
-    and political views on various topic. Luckily, he is not an Americans.
+    and political views on various topic. Luckily, he is not an American.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: LittleClover8
