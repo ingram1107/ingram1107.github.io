@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Google Will Limit API Access to Unofficial Chromium Build"
+date:   2021-02-03 20:17:38 +0800
+categories: floss
+---
+Google announced that they are going to [limit API access to unofficial Chromium build][chrome-blog] start in 15 March 2021, which means that some features such as data syncing, geolocation and enhanced spell check might behave strangely or completely malfunction. Users are expected to download only from its official build.
+
+It might not be a concern to day-to-day use if you are not using those features anyway, it is a major blow to the morale of Linux distribution package maintainers. [Fedora Chromium package maintainer][fedora-maintainer] stressed that he/she rejects the idea to ship a half-functional browser to the userspace. He/She mentions that Google gave those API keys to them back in 2013. "And now they're taking it away", he/she noted.
+
+It is not a surprised to see that Google are trying to restrict the access of their proprietary API from other unofficial build and fork of Chromium. Now, they are trying even harder to monopolise the distribution of it. This is a damaging move from Google dealt to open source community that they sought to promote, which show how hypocrite they are.
+
+If you are seeking for an alternative, I would recommend other renown FLOSS software such as Firefox, which I use day-to-day, qutebrowser and Min.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+[chrome-blog]: https://blog.chromium.org/2021/01/limiting-private-api-availability-in.html
+[fedora-maintainer]: https://bodhi.fedoraproject.org/updates/FEDORA-2021-48866282e5
