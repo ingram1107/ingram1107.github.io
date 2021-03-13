@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "My Case Against Bug 1693028"
+date:   2021-03-13 22:24:36 +0800
+categories: floss
+---
+The [Bug 1693028][bugzilla] on Bugzilla have been filed to remove the compact
+density mode from Firefox with the reason that he assumes this feature gets low
+engagement from the users. In order to "ensure Firefox remains simple to use and
+simple to maintain", he suggests removing the compact density mode from
+customise palette.
+
+However, there is no valid statistic suggested that this feature is not being
+used by Firefox user base. The only data that he is referred to is the screen
+resolution report which states that 31.7% of users are running 768 pixels
+height, 61.6% of users are running more than 768 pixels height and the rest of
+them are running variety of resolutions including headless. That said, this data
+does not indicate how many people are using compact density mode for daily
+chore. His suggestion is based on a speculation which is not solid.
+
+There is no clear evidence that personal preferences for UI especially on
+choosing compact UI or loose UI is related to personal computer's screen
+resolution. UI design is more related to the electronic device's functionality
+that is the device's responsiveness or its accessibility (using pen or touch
+screen) than to the device's screen resolution. That is the reason why website
+can be display differently for different devices. For touch screen devices,
+website tends to have bigger buttons but for personal computer it will focus on
+displaying more texts to its user.
+
+Enough of talking the argument flaws, why I am defending the existences of
+compact density mode in Firefox?
+
+The reason is quite simple: I want to see more website contents. By having a
+larger status bar (in this case Proton), it does not really benefit my workflow.
+Considering that I need to constantly browse through GitHub, GitLab, and other
+various text-heavy website (even Twitter or Mastodon), it would be annoying that
+the status bar is standing in the way from viewing a long paragraph or a great
+number of code lines even if it is only increased by 1%. In fact, for most of
+the time, we do not read from the very top to the very bottom of the display
+area that the browser has offered. We are likely to scroll down if the paragraph
+begins to "fall" from the centre of the screen. This means that by increasing
+the status bar height, we are going to hinder our productivity by unconsciously
+scrolling down more frequent due to the slight increases of the status bar, and
+for the kind of person whose quite sensitive for such change, it is painful for
+me to experience.
+
+Moreover, for lots of Firefox users, the starting point for them to customise
+the browser is to get into the `Customise` option that Firefox offers. That page
+is a truly fascinating space for the newcomers especially if they are from
+Chrome to implement their own idea on how should the browser of their computer
+should be looked. Such inspiration is what driving some users to
+customise their browser via sophisticated way such as userChrome.css in the
+purpose of fitting Firefox into their own aesthetic. Compact density is one of
+such inspirations which encourage users to do more customisations on the browser
+and struggle on doing it better. Taking this feature away from the core will
+demoralise Firefox user base. How can Firefox still stand out to its competitors
+by saying it is giving the freedom to its users to "make Firefox your own"
+while at the same time its core development team removes such important feature
+of it?
+
+I sincerely hope that my criticism can be listened by Firefox development team. It
+is not the direction that this community desired.
+
+[bugzilla]: https://bugzilla.mozilla.org/show_bug.cgi?id=1693028#c58
