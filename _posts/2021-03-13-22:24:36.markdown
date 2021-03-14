@@ -61,4 +61,11 @@ of it?
 I sincerely hope that my criticism can be listened by Firefox development team. It
 is not the direction that this community desired.
 
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+alt="Creative Commons License" style="border-width:0"
+src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is
+licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution
+4.0 International License</a>
+
 [bugzilla]: https://bugzilla.mozilla.org/show_bug.cgi?id=1693028#c58
