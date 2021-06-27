@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "Language-Based Access Control (1)"
+date:   2021-06-27 01:06:57 PM +0800
+categories: technology
+---
+
+When I was reading Operating System Concepts (or "the dinosaurs book"), there
+are some interesting researches on language-based access control attracted my
+attention. I was wandering how could a compiler handle such a complex task
+especially for protection on dynamic resource management.
+
+[Researches done by Kieburtz and Silberschatz][kieburtz] presented two concepts:
+capability managers and an access-right expression. First, let us get to know
+more about what does a capability mean. A capability is an access control
+protocol that specify restricted rights on a certain objects such as file, disk,
+printer for a running process by request. Although a running process can acquire
+a capability by request, such acquisition is done indirectly, where direct
+operations are progress by operating system on behalf of the process. This might
+sound convenient enough for a system designer, but the revocation of such
+capability might be too inefficient to be implemented.
+
+In their paper, resources are described to have a set of rights and dedicated
+exportable procedures. After a resource type have been declared, a manager
+should be stated declaratively to manage the corresponding resource type
+instances. From customer process perspective, to successfully acquire a specific
+resource, it needs to declare a resource type instance, either as a receiver or
+a sender, in the name of the corresponding manager. Thus, resources are
+sufficiently accessed by the customer process while well protected by the
+capability manager mechanism. That being said, revocation of a capability is
+still a hassle to dealt in this extend. Kieburtz and Silberschatz figured that
+using a _key_ property might be the solution to this.
+
+A _key_ is given when the capability is granted by a customer process, and each
+key is unique. To achieve this, every resource should have the un-exportable
+right to be revoked, that is, according to them, by setting or resetting the
+key. Only manager have the implicit right to revoke a resource so that the
+customer process will not accidentally or maliciously hoarding it. Furthermore,
+a `Wakeup` procedure should be deployed in order to prevent deadlock in the
+capability queue. The capability manager will then be declared has the right to
+revoke a resource in a timeout manner, and such right should be exercised by a
+dedicated process rather than the same customer process that is accessing the
+resource. Notice that all of these are done in a static manner.
+
+For resource sharing, they suggested having an implicitly declared `monitor`
+instance which is associated with every instance of a revocable class. This
+instance has two callers, prologue and epilogue, and stores a count of current
+active processes which can be later accessed by manager. When the monitor
+instance call prologue caller, it will check whether is the customer process has
+the valid key to the corresponding capability, it then will increment the count
+otherwise an exception will be thrown. When the monitor instance call epilogue
+caller, it will simply decrement the count, and if there's no active process
+left, it will broadcast a signal. Although monitor might be behaved like a
+regular instance that user requested, such instance is not visible to programmer
+in order to obtain some degree of system protection. When it comes to
+readers-writers problem, they gave writes the pre-emptive priority over readers,
+so that starvation could be avoided.
+
+Kieburtz and Silberschatz's capability managers introduce quite a few benefits
+compare to kernel-based capability system. The first obvious advantage of a
+language-based solution is that the request for capability can be declared ahead
+of time before execution which in turn reduce runtime overhead. Furthermore, it
+is superior to a control mechanism since intent verification can be done at
+compile time. Greater flexibility is also one of the main points of avocation
+for language-based capability managers.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+alt="Creative Commons License" style="border-width:0"
+src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is
+licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution
+4.0 International License</a>
+
+[kieburtz]: https://ieeexplore.ieee.org/document/1702566
