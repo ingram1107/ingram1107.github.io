@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 As an IT student, he learnt a lot of programming languages during his exploration
-and eventually fall in love with Linux, Vim, and free and open source sofware
+and eventually fall in love with Linux, Vim, and free and open source software
 philosophy.
 
 With these reasons, all of the articles in this blog site are licensed under
