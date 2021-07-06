@@ -1,0 +1,95 @@
+---
+layout: post
+title:  "Language-Based Access Control (2)"
+date:   2021-07-06 03:04:12 PM +0800
+categories: technology
+---
+
+In my [previous blog][prev-b], Kieburtz & Silberchatz presented language-based
+capability managers in order to protect resource being directly accessed by
+customer processes and thus avoid further abuse. Although the resources, now
+managed by an abstract type called `monitor`, can only be accessed by user
+process via predefined operators, defined in an abstract type called `class`,
+those operators could still be invoked in an arbitrary sequence and parameter
+values that can return a larger set of states of that `class` than the system
+designer had intended due to the nature of `class`. This might drive the
+`class` object into an inconsistent state which is not desirable.
+
+To understand why `class` could be lead into an inconsistent state, we should,
+[Kieburtz & Silberchatz argued][kieburtz], understand the definition of two
+subsets of consistency: **internal consistency** and **external consistency**.
+An **internal consistence** can be obtained when each operation defined in
+`class` or any similar abstract type behave correctly with the assumption that
+`class` object is in an acceptable state. This can be secured simply by `class`
+definition. The other one, **external consistency**, is defined as the
+observation of a sequential constraint upon the order of applications of the
+operations which is invoked by any user of the `class` object. The sequential
+constraint will ensure that no operation would be invoked until the preceding
+sequence left an acceptable state of the `class` object. A separate proof for
+each program that uses an instance of the class are required in proving external
+consistency.
+
+To enforce external consistency, they suggested that one must inspect all
+programs which request access and usage of `monitor` and its corresponding
+resource to meet the following two conditions:
+1. Customer process will always make calls upon the `monitor` in a correct
+   sequence,
+2. Uncooperative process will not entirely forgo the use of mutual exclusion
+   gateway and simply access resource without access protocols.
+
+**Access-right expression**, embedded in programming language and enforced by
+the language implementation, would do that just right. It would allow and
+restrict customer process to a set of rights of an abstract type or names of its
+externally visible operations. Since we are dealing with a passive abstract type
+object, access-right expression will only constrain the user process which is
+external and active. To embed access-right expression into a programming
+language, it needs to be part of a `class` or `monitor` definition.
+Additionally, access-right expression should be able to specify sequential,
+selective and repetitive execution order, which been syntactically defined by
+Kieburtz and Silberschatz as `;`, `,` and `[]` respectively. The following is
+the general syntax for access-right expression proposed by them in the paper:
+
+```pascal
+access-right <identifier> = <access-right expr>
+```
+
+Even though access-right expression is capable in enforcing sequence, it does
+not assure that the access-control mechanism will not buy bypassed and the
+customer process obeying the declared access-right expression will invoke only
+the declared operations. To solve this problem, Kieburtz and Silberschatz
+modified an existed abstract type, `manager`, which derived from `monitor`, to
+define access-right expression when it is declared. It will have a formal
+parameter, which act like naming capability. Customer process which access
+resources via this kind of `manager` will not have access binding until it
+execute the allocation procedure from the `manager`. In its own declaration, the
+customer process must declare mode of usage, there must be no mixing between
+modes. Such mechanism is guaranteed to be not subverted.
+
+By using this `manager` as an access-control mechanism, customer access can
+either access a resource via dynamic or static manner. If the resources are
+allocated with latter technique, then the customer access must forgo the
+enhanced operations provided the manager of the corresponding resources. If the
+customer process is malfunction or acting maliciously, a pre-emptive revocation
+of rights, discussed in the [previous blog][prev-b], will revoke the capability
+obtained by that particular process.
+
+To compile this new language specification, a [flow-analysis][flow-analysis] is
+needed to explore every possible path within a particular program module. If the
+restrictions are observed, then there is no need to have a runtime check.
+However, if there are no restrictions observed and no violation, the compiler
+should insert codes to force a runtime check on ordering of invocations by using
+the emulation of finite-state acceptor. More details can be seen in [their
+article][kieburtz]'s section 7.
+
+The benefit of using access-right expression with the combination of `manager`
+type is that the external consistency can be enforced throughout the process
+lifetime so that there will no arbitrary sequence of operation calls which may
+left resource class in an unknown state. That means, a customer process cannot
+operate on a resource without a permission, causing deadlock by re-requesting
+access or release a resource that is not previously gained.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+
+[prev-b]: https://ingram1107.github.io/technology/2021/06/27/01-06-57.html
+[kieburtz]: https://dl.acm.org/doi/10.1145/357195.357201
+[flow-analysis]: https://en.wikipedia.org/wiki/Data-flow_analysis
