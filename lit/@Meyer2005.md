@@ -121,7 +121,7 @@ function defined outside the scope of the class.
 
 - [x] Item 46: Define non-member functions inside templates when type
   conversions are desired
-- [ ] Item 44: Factor parameter-independent code out of templates
+- [x] Item 44: Factor parameter-independent code out of templates
 - [x] Item 53: Pay attention to compiler warnings
 
 # Item 47: Use traits classes for information inside templates
@@ -745,7 +745,7 @@ add the `virtual` quantifier to the base class destructor.
 
 - [x] Item 49: Understand the behavior of the new-handler
 - [x] Item 52: Write placement `delete` if you write placement `new`
-- [ ] Item 16: Use the same form in corresponding uses of `new` and `delete`
+- [x] Item 16: Use the same form in corresponding uses of `new` and `delete`
 
 # Item 54: Familiarize yourself with the standard library, including TR1
 
@@ -996,8 +996,8 @@ public:
 }
 ```
 
-- [ ] Item 16: Use the same form in corresponding uses of `new` and `delete`
-- [ ] Item 17: Store `new`ed objects in smart pointers in standalone statements
+- [x] Item 16: Use the same form in corresponding uses of `new` and `delete`
+- [x] Item 17: Store `new`ed objects in smart pointers in standalone statements
 - [ ] Item 33: Avoid hiding inherited names
 
 # Item 29: Strive for exception-safe code
@@ -1033,9 +1033,9 @@ function, recommended in the book, has since deprecated in C++11).
 It is advised to change indicator only after it is certain that something has
 happened and use [RAII](../202202012306.md) classes (like smart pointers) to
 manage resources. To further strengthen the *strong* guarantee, we can utilise
-copy-and-swap by implementing pimpl idiom (Handler class), that is, putting
-per-object data from the real object into separate implementation where the
-latter points to it.
+copy-and-swap by implementing [PIMPL](../202307101457.md) idiom (Handler
+class), that is, putting per-object data from the real object into separate
+implementation where the latter points to it.
 
 There are some limitations or considerations when one is to design a strong
 exception-safety guarantee function. The function(s) with weaker guarantee can
@@ -1052,10 +1052,59 @@ It is wise to document the exception-safety of each function and the reason
 behind such decision for client and future maintenance.
 
 - [ ] Item 25: Consider support for a non-throwing `swap`
-- [ ] Item 31: Minimize compilation dependencies between files
+- [x] Item 31: Minimize compilation dependencies between files
 
 # Item 31: Minimize compilation dependencies between files
 
+`#include` sets up compilation dependencies to a file since there is a need to
+access class definitions. The [Compiler](../202302152015.md) must know the
+object's size, and it will be a problem if the implementation is omitted.
+Therefore, the author suggests adhere to the principle of **dependencies on
+declarations** instead of on definitions. Avoid using objects, and instead
+utilise object references and pointers (using [pimpl](../202307101457.md)
+idiom). We can have separate header file for declarations and definitions (no
+forward definition needed).
+
+Alternatively, we can declare an Interface class (abstract class) with no
+constructors, have a virtual destructor, and all virtual functions are declared
+virtual. Objects are created via [Factory Method](../202302232101.md) which is a
+static method that returns a smart pointer to the Interface class. The Concrete
+class will inherit the specifications from the Interface, in which it will
+implement all the virtual functions. Multiple inheritance may be used.
+
+**Note**: Both approaches (PIMPL and Factory Method) move data members into
+implementer class. In PIMPL, it is the PIMPL class. For factory method, it's the
+concrete class.
+
+**Note**: **DO NOT FORWARD DECLARE A STANDARD LIBRARY OBJECT.**
+
+Both approaches have the short-coming of underutilising
+[inlining](../202205171916.md) as they hide the implementations. PIMPL
+approach adds the additional overhead in pointer indirection, extra pointer
+memory, dynamic memory management (allocation and deallocation), and with the
+possibility of `bad_alloc` [Exception](../202405222000.md). Factory method
+approach's overhead is incurred by indirect jump caused by virtual functions and
+increase memory on object due to virtual table pointer. Despite these, the
+author recommends them as they offer minimum impact on clients when
+implementation changes.
+
 # Item 16: Use the same form in corresponding uses of `new` and `delete`
 
+For single object, use `new` and `delete` without quantifier for its
+construction and destruction. For array, use `delete []` for its destruction.
+Avoid `typedef`ing array type to prevent confusion, and instead deploy it with
+`vector`.
+
 # Item 17: Store `new`ed objects in smart pointers in standalone statements
+
+Since the execution order of function parameters depend on
+[Compiler](../202302152015.md), leaks could happen if one of the parameters
+throw an exception, which will comprise [Exception Safety](../202203241405.md).
+The best practice is to contain resource construction in a standalone statement
+before passing them as a function parameter.
+
+# Item 55: Familiarize yourself with Boost
+
+# Item 33: Avoid hiding inherited names
+
+# Item 37: Never redefine a function's inherited default parameter value
