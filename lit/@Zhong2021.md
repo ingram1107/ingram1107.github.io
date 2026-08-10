@@ -102,7 +102,7 @@ technologies achieve almost 100% for both statistic). (pg. 13, Section 7.2)
 UAV can be used to provide wireless communication and computing services to HSR
 IoT. (pg. 14, Section 7.4)
 
-Blockchain to enhance authenticity and fault-tolerant of HSR IoT. (pg. 14-15,
+Blockchain to enhance authenticity and [fault-tolerant](../202607261841.md) of HSR IoT. (pg. 14-15,
 Section 7.5)
 
 ## Inference made from the paper
